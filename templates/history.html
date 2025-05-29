@@ -156,6 +156,28 @@
         <div class="history-header">
             <h1>Classification History</h1>
             <p>View your recent image classifications and their results</p>
+            <div class="history-controls">
+                <div class="filter-controls">
+                    <label for="categoryFilter">Filter by Category:</label>
+                    <select id="categoryFilter" onchange="filterHistory(this.value)">
+                        <option value="all" {% if selected_category == 'all' %}selected{% endif %}>All Categories</option>
+                        <option value="document" {% if selected_category == 'document' %}selected{% endif %}>Documents</option>
+                        <option value="non-generic" {% if selected_category == 'non-generic' %}selected{% endif %}>Non-Generic</option>
+                        <option value="generic" {% if selected_category == 'generic' %}selected{% endif %}>Generic</option>
+                        <option value="unknown" {% if selected_category == 'unknown' %}selected{% endif %}>Unknown</option>
+                    </select>
+                </div>
+                <div class="action-controls">
+                    <button class="action-btn" onclick="downloadReport()">
+                        <i class="fas fa-download"></i> Download Report
+                    </button>
+                    <form action="{{ url_for('clear_history') }}" method="POST" style="display: inline;">
+                        <button type="submit" class="action-btn" style="background: var(--error-color);" onclick="return confirm('Are you sure you want to clear all history?')">
+                            <i class="fas fa-trash"></i> Clear History
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         {% if classifications %}
@@ -192,6 +214,19 @@
             <a href="/" class="btn">Start Classifying</a>
         </div>
         {% endif %}
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for message in messages %}
+            <div class="flash-message">
+                <i class="fas fa-info-circle"></i>
+                <span>{{ message }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
     </main>
 
     <footer>
@@ -212,5 +247,16 @@
         </div>
         <p>&copy; 2024 SortSnap. All rights reserved.</p>
     </footer>
+
+    <script>
+    function filterHistory(category) {
+        window.location.href = `/filter-history?category=${category}`;
+    }
+
+    function downloadReport() {
+        const category = document.getElementById('categoryFilter').value;
+        window.location.href = `/download-report?category=${category}`;
+    }
+    </script>
 </body>
 </html> 
