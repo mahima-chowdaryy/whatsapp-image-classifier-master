@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SortSnap</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-camera"></i>
+                <i class="fas fa-sort-amount-down"></i>
+            </div>
+            <span>SortSnap</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about" class="active">About</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="about-hero">
+            <h1>About SortSnap</h1>
+            <p class="about-subtitle">Your AI-Powered Image Organization Solution</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card main-card">
+                <div class="card-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2>What is SortSnap?</h2>
+                <p>SortSnap is an intelligent image classification tool designed to help you organize your images. Using advanced machine learning technology, it automatically categorizes your images into three main categories.</p>
+            </div>
+
+            <div class="category-cards">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Generic Images</h3>
+                    <p>Common, everyday photos that you might want to organize separately.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Non-Generic Images</h3>
+                    <p>Unique or special photos that deserve special attention.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Documents</h3>
+                    <p>Important documents and text-based images for easy access.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-section">
+            <h2>How It Works</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <div class="process-content">
+                        <h3>Upload</h3>
+                        <p>Simply upload your WhatsApp image through our user-friendly interface.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="process-content">
+                        <h3>Analyze</h3>
+                        <p>Our AI model analyzes the image content using advanced algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="process-content">
+                        <h3>Classify</h3>
+                        <p>Get instant classification results with high accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Flask backend for robust web application</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>TensorFlow</h3>
+                    <p>Advanced machine learning capabilities</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Modern and responsive web design</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Beautiful and interactive UI</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-camera"></i>
+                    <i class="fas fa-sort-amount-down"></i>
+                </div>
+                <span>SortSnap</span>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+            </div>
+        </div>
+        <p>&copy; 2024 SortSnap. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
