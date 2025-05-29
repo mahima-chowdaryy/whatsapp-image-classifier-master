@@ -1,0 +1,1 @@
+[{"filename": "1.jpg", "category": "Unknown", "probabilities": {"Document": "9.1%", "Non-Generic": "70.4%", "Generic": "20.5%"}, "time": "2025-05-29 20:51:54"}, {"filename": "generic1.jpg", "category": "Generic", "probabilities": {"Document": "23.2%", "Non-Generic": "0.1%", "Generic": "76.7%"}, "time": "2025-05-29 20:49:22"}]
